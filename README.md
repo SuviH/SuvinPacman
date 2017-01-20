@@ -1,2 +1,2 @@
 # SuvinPacman
-Suvin upein Pacman-peli
+Suvin upea Pacman-peli!
