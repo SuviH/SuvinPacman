@@ -1,7 +1,11 @@
 ### Aihe:
-Tarkoituksena toteuttaa Pacmanin kaltainen sokkelopeli, jossa pacman-pallero syö pisteitä/herkkuja. Pacman-pallerolla on vihollisia, haamuja, jotka yrittävät saada pacmanin kiinni. Pelaaja ohjailee pacmania, välttelee haamuja ja yrittää syödä kaikki herkut. Alustavasti pelissä on vain yksi kenttä, eli peli päättyy, kun kaikki pallerot on syöty, tai haamut onnistuvat saamaan pacmanin kiinni.
-![Luokkakaavio](/dokumentaatio/Luokkakaavio SuvinPacman.png)
+Tarkoituksena toteuttaa Pacmanin kaltainen sokkelopeli, jossa Pacman-pallero syö kentällä olevia pisteitä/herkkuja. Pacman-pallerolla on vihollisenaan haamuja, jotka yrittävät saada Pacmanin kiinni. Pelaaja ohjailee Pacmania, välttelee haamuja ja yrittää syödä kaikki herkut. Pelaaja voittaa, jos hän onnistuu syömään kaikki pallerot, ja häviää, jos haamut onnistuvat saamaan pacmanin kiinni. Alussa, ja aina pelin päätyttyä ollaan aloitusruudussa, jossa on nappula "Aloita", jota painamalla siirrytään peliruutuun ja uusi peli alkaa.
+
 ### Toiminnot:
 -uuden pelin aloittaminen
 -pelin lopettaminen
+
+
+![Luokkakaavio](/dokumentaatio/Luokkakaavio SuvinPacman(1).png)
+
 
