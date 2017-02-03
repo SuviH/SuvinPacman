@@ -3,18 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package suvinpacman.suvinpacman;
+package suvinpacman.suvinpacman.nakyma;
 
-import suvinpacman.suvinpacman.nakyma.Nakyma;
+import javax.swing.JPanel;
 
 /**
  *
  * @author suvi
  */
-public class Main {
+public class Pelipaneeli extends JPanel {
 
-    public static void main(String[] args) {
-        Nakyma nakyma = new Nakyma();
-
-    }
 }

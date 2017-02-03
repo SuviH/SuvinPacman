@@ -17,13 +17,12 @@ import static org.junit.Assert.*;
  * @author suvi
  */
 public class HerkkuTest {
-    
+
     public HerkkuTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
-    
+
 }

@@ -17,28 +17,45 @@ import static org.junit.Assert.*;
  * @author suvi
  */
 public class KummitusTest {
+
     private Kummitus huhuu;
-    
+
     public KummitusTest() {
     }
-    
+
     @Before
     public void setUp() {
-        this.huhuu = new Kummitus(1,1);
+        this.huhuu = new Kummitus(1, 1);
     }
+
     @Test
-    public void testiKummitusSetSuunta(){
+    public void testiKummitusSetSuunta() {
         huhuu.setSuunta(Hahmo.SUUNTA.YLOS);
         assertEquals(Hahmo.SUUNTA.YLOS, huhuu.getSuunta());
     }
+
     @Test
-    public void testiKummitusXKoordinaatinAsettaminenToimii(){
+    public void testiKummitusXKoordinaatinAsettaminenToimii() {
         assertEquals(1, huhuu.getX());
     }
+
     @Test
-    public void testiKummitusYKoordinaatinAsettaminenToimii(){
+    public void testiKummitusYKoordinaatinAsettaminenToimii() {
         assertEquals(1, huhuu.getY());
     }
-    
-    
+
+    @Test
+    public void kummituksenLiikkuminenToimiiYAkseli() {
+        huhuu.setSuunta(Hahmo.SUUNTA.ALAS);
+        huhuu.liiku();
+        assertEquals(2, huhuu.getY());
+    }
+
+    @Test
+    public void kummituksenLiikkuminenToimiiXAkseli() {
+        huhuu.setSuunta(Hahmo.SUUNTA.OIKEA);
+        huhuu.liiku();
+        assertEquals(2, huhuu.getX());
+    }
+
 }

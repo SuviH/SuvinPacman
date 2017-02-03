@@ -17,19 +17,21 @@ import static org.junit.Assert.*;
  * @author suvi
  */
 public class SeinapalaTest {
-    
+
     public SeinapalaTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
+
     @Test
     public void testiSeinaSetX() {
         Seinapala pala = new Seinapala();
         pala.setX(2);
         assertEquals(2, pala.getX());
     }
+
     @Test
     public void testiSeinaSetY() {
         Seinapala pala = new Seinapala();

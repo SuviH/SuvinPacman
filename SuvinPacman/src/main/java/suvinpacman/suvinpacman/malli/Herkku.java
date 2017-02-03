@@ -10,6 +10,7 @@ package suvinpacman.suvinpacman.malli;
  * @author suvi
  */
 public class Herkku {
+
     private int x;
     private int y;
 
@@ -17,5 +18,5 @@ public class Herkku {
         this.x = x;
         this.y = y;
     }
-    
+
 }

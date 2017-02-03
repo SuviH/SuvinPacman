@@ -10,9 +10,9 @@ package suvinpacman.suvinpacman.malli;
  * @author suvi
  */
 public class Seinapala {
+
     private int x;
     private int y;
-    
 
     public void setX(int x) {
         this.x = x;
@@ -30,6 +30,4 @@ public class Seinapala {
         return y;
     }
 
-    
-    
 }

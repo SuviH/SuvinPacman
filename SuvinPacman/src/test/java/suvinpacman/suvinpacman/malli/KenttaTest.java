@@ -18,34 +18,37 @@ import static org.junit.Assert.*;
  * @author suvi
  */
 public class KenttaTest {
+
     private Kentta kentta;
-    
+
     public KenttaTest() {
     }
-    
+
     @Before
     public void setUp() {
         kentta = new Kentta();
     }
-    
+
     @Test
     public void testiAlussaHerkkujaEiOle() {
         assertTrue(kentta.onkoKaikkiHerkutSyoty());
     }
+
     @Test
-    public void testiKummituksiaLisataanKolme(){
+    public void testiKummituksiaLisataanKolme() {
         assertEquals(3, kentta.getKummitukset().size());
     }
+
     @Test
-    public void testiHerkkujenLisaysOnnistuu(){
+    public void testiHerkkujenLisaysOnnistuu() {
         kentta.lisaaHerkut();
         assertFalse(kentta.onkoKaikkiHerkutSyoty());
     }
+
     @Test
-    public void testiHerkkujenLisaysLisaaKymmenen(){
+    public void testiHerkkujenLisaysLisaaKymmenen() {
         kentta.lisaaHerkut();
         assertEquals(10, kentta.getHerkut().size());
     }
 
-    
 }

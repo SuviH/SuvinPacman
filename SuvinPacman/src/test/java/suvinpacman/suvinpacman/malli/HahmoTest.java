@@ -18,15 +18,12 @@ import static org.junit.Assert.*;
  * @author suvi
  */
 public class HahmoTest {
-    
+
     public HahmoTest() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
 
-    
-    
 }

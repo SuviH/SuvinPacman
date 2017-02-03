@@ -12,9 +12,9 @@ import suvinpacman.suvinpacman.malli.Hahmo;
  * @author suvi
  */
 public class Kummitus extends Hahmo {
-    
+
     public Kummitus(int x, int y) {
         super(x, y);
     }
-    
+
 }
