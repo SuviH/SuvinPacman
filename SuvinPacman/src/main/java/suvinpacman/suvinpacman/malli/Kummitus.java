@@ -11,6 +11,9 @@ import suvinpacman.suvinpacman.malli.Hahmo;
  *
  * @author suvi
  */
+/**
+ * Hahmo-luokan periva luokka, pelin kummitus-hahmot.
+ */
 public class Kummitus extends Hahmo {
 
     public Kummitus(int x, int y) {

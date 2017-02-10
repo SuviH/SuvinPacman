@@ -5,19 +5,31 @@
  */
 package suvinpacman.suvinpacman.nakyma;
 
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
+import suvinpacman.suvinpacman.malli.Malli;
 
 /**
  *
  * @author suvi
  */
+/**
+ * Aloituspaneeli, jossa peli on aloitustilassa, tasta luokasta peli alkaa ja siirtyy pelitilaan.
+ */
 public class Aloituspaneeli extends JPanel {
 
     private JButton aloitaNappi;
+    private Malli malli;
+    private Nakyma nakyma;
 
-    public Aloituspaneeli() {
+    public Aloituspaneeli(Malli malli, Nakyma nakyma) {
+        this.malli = malli;
+        this.nakyma = nakyma;
         this.aloitaNappi = new JButton("Aloita");
+        ActionListener bl = new ButtonListener(malli, nakyma);
+        this.aloitaNappi.addActionListener(bl);
         this.add(aloitaNappi);
+
     }
 }

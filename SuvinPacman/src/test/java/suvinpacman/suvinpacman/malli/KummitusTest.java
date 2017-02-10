@@ -47,14 +47,14 @@ public class KummitusTest {
     @Test
     public void kummituksenLiikkuminenToimiiYAkseli() {
         huhuu.setSuunta(Hahmo.SUUNTA.ALAS);
-        huhuu.liiku();
+        huhuu.liiku(new Kentta());
         assertEquals(2, huhuu.getY());
     }
 
     @Test
     public void kummituksenLiikkuminenToimiiXAkseli() {
         huhuu.setSuunta(Hahmo.SUUNTA.OIKEA);
-        huhuu.liiku();
+        huhuu.liiku(new Kentta());
         assertEquals(2, huhuu.getX());
     }
 

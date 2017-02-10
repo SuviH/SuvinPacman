@@ -13,6 +13,9 @@ import java.util.ArrayList;
  *
  * @author suvi
  */
+/**
+ * Hahmo-luokan periva luokka, pelin pacman-hahmo.
+ */
 public class Pacman extends Hahmo {
 
     public Pacman(int x, int y) {
@@ -20,10 +23,20 @@ public class Pacman extends Hahmo {
     }
 
     public boolean tormaaKummitukseen(ArrayList<Hahmo> kummitukset) {
+        for (Hahmo hahmo : kummitukset) {
+            if (this.x == hahmo.getX() && this.y == hahmo.getY()) {
+                return true;
+            }
+        }
         return false;
     }
 
     public boolean tormaaHerkkuun(ArrayList<Herkku> herkut) {
+        for (Herkku herkku : herkut) {
+            if (this.x == herkku.getX() && this.y == herkku.getY()) {
+                return true;
+            }
+        }
         return false;
     }
 }

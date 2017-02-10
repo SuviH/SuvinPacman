@@ -11,6 +11,9 @@ import java.util.ArrayList;
  *
  * @author suvi
  */
+/**
+ * Abstrakti luokka Hahmo, Kummitus ja Pacman perivat luokan.
+ */
 public abstract class Hahmo {
 
     protected int x;
@@ -26,15 +29,35 @@ public abstract class Hahmo {
         YLOS, ALAS, VASEN, OIKEA;
     }
 
-    public void liiku() {
+    public void liiku(Kentta kentta) {
         if (suunta == SUUNTA.YLOS) {
-            this.y--;
+            if (kentta.onkoKoordinaatissaSeina(this.x, this.y + 1)) {
+                suunta = SUUNTA.ALAS;
+            } else {
+                this.y--;
+            }
+
         } else if (suunta == SUUNTA.ALAS) {
-            this.y++;
+            if (kentta.onkoKoordinaatissaSeina(this.x, this.y - 1)) {
+                suunta = SUUNTA.YLOS;
+            } else {
+                this.y++;
+            }
+
         } else if (suunta == SUUNTA.VASEN) {
-            this.x--;
+            if (kentta.onkoKoordinaatissaSeina(this.x - 1, this.y)) {
+                suunta = SUUNTA.OIKEA;
+            } else {
+                this.x--;
+            }
+
         } else if (suunta == SUUNTA.OIKEA) {
-            this.x++;
+            if (kentta.onkoKoordinaatissaSeina(this.x + 1, this.y)) {
+                suunta = SUUNTA.VASEN;
+            } else {
+                this.x++;
+            }
+
         }
     }
 
@@ -60,11 +83,6 @@ public abstract class Hahmo {
 
     public int getY() {
         return y;
-    }
-
-    public boolean tormaaSeinaan(ArrayList<Seinapala> seinat) {
-
-        return false;
     }
 
 }

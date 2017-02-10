@@ -25,7 +25,7 @@ under the License.
     <language>en-us</language>
     <copyright>&#169;2017</copyright>
     <item>
-      <title>File: 10,
+      <title>File: 12,
              Errors: 0,
              Warnings: 0,
              Infos: 0
@@ -44,6 +44,34 @@ under the License.
             </tr>
           </thead>
           <tbody>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#suvinpacman.suvinpacman.nakyma.ButtonListener.java">suvinpacman/suvinpacman/nakyma/ButtonListener.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#suvinpacman.suvinpacman.malli.Malli.java">suvinpacman/suvinpacman/malli/Malli.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
                           <tr>
                 <td>
                   <a href="${project.url}/checkstyle.html#suvinpacman.suvinpacman.malli.Seinapala.java">suvinpacman/suvinpacman/malli/Seinapala.java</a>

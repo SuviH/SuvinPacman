@@ -9,6 +9,9 @@ package suvinpacman.suvinpacman.malli;
  *
  * @author suvi
  */
+/**
+ * Pelikentan seinat koostuvat useista seinapaloista.
+ */
 public class Seinapala {
 
     private int x;

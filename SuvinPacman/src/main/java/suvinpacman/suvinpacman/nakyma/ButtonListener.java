@@ -5,9 +5,8 @@
  */
 package suvinpacman.suvinpacman.nakyma;
 
-import java.awt.Color;
-import java.awt.Graphics;
-import javax.swing.JPanel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import suvinpacman.suvinpacman.malli.Malli;
 
 /**
@@ -15,22 +14,22 @@ import suvinpacman.suvinpacman.malli.Malli;
  * @author suvi
  */
 /**
- * Pelipaneelissa ollaan kun peli on pelitilassa.
+ * ActionListener joka hallitsee aloita-nappulan toimintoja.
  */
-public class Pelipaneeli extends JPanel {
+public class ButtonListener implements ActionListener {
 
     private Malli malli;
     private Nakyma nakyma;
-
-    public Pelipaneeli(Malli malli, Nakyma nakyma) {
+    
+    public ButtonListener(Malli malli, Nakyma nakyma) {
         this.malli = malli;
         this.nakyma = nakyma;
-        this.setBackground(Color.BLACK);
     }
-
+    
     @Override
-    protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
+    public void actionPerformed(ActionEvent ae) {
+        malli.vaihdaPelinTila(Malli.PelinTila.PELI);
+        nakyma.pelinTilaMuuttunut(Malli.PelinTila.PELI);
     }
-
+    
 }

@@ -9,6 +9,9 @@ package suvinpacman.suvinpacman.malli;
  *
  * @author suvi
  */
+/**
+ * Luokasta muodostuvat pelin herkut joita pacman syo.
+ */
 public class Herkku {
 
     private int x;
@@ -16,6 +19,22 @@ public class Herkku {
 
     public Herkku(int x, int y) {
         this.x = x;
+        this.y = y;
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public void setY(int y) {
         this.y = y;
     }
 

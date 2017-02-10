@@ -5,6 +5,7 @@
  */
 package suvinpacman.suvinpacman;
 
+import suvinpacman.suvinpacman.malli.Malli;
 import suvinpacman.suvinpacman.nakyma.Nakyma;
 
 /**
@@ -14,7 +15,7 @@ import suvinpacman.suvinpacman.nakyma.Nakyma;
 public class Main {
 
     public static void main(String[] args) {
-        Nakyma nakyma = new Nakyma();
+        Nakyma nakyma = new Nakyma(new Malli());
 
     }
 }

@@ -11,6 +11,9 @@ import java.util.ArrayList;
  *
  * @author suvi
  */
+/**
+ * Kentta sisaltaa kaikki pelikentalla olevat palaset, hahmot, herkut, seinat.
+ */
 public class Kentta {
 
     private Pacman pacman;
@@ -65,6 +68,15 @@ public class Kentta {
 
     public ArrayList<Seinapala> getSeinat() {
         return seinat;
+    }
+
+    public boolean onkoKoordinaatissaSeina(int x, int y) {
+        for (Seinapala seina : this.seinat) {
+            if (seina.getX() == x && seina.getY() == y) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
