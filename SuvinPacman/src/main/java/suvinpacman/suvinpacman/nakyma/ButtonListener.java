@@ -20,16 +20,16 @@ public class ButtonListener implements ActionListener {
 
     private Malli malli;
     private Nakyma nakyma;
-    
+
     public ButtonListener(Malli malli, Nakyma nakyma) {
         this.malli = malli;
         this.nakyma = nakyma;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent ae) {
         malli.vaihdaPelinTila(Malli.PelinTila.PELI);
         nakyma.pelinTilaMuuttunut(Malli.PelinTila.PELI);
     }
-    
+
 }

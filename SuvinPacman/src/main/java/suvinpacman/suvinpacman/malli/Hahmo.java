@@ -85,7 +85,5 @@ public abstract class Hahmo {
     public int getY() {
         return y;
     }
-    
-    
 
 }

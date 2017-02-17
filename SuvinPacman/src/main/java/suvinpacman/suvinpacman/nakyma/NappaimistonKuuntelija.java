@@ -16,7 +16,7 @@ import suvinpacman.suvinpacman.malli.Pacman;
  * @author suvi
  */
 public class NappaimistonKuuntelija implements KeyListener {
-    
+
     private Pacman pacman;
     private Component component;
 
@@ -24,32 +24,31 @@ public class NappaimistonKuuntelija implements KeyListener {
         this.pacman = pacman;
         this.component = component;
     }
-    
 
     @Override
     public void keyTyped(KeyEvent e) {
-        
+
     }
 
     @Override
     public void keyPressed(KeyEvent e) {
-        
+
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             pacman.setSuunta(Hahmo.SUUNTA.VASEN);
         } else if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
             pacman.setSuunta(Hahmo.SUUNTA.OIKEA);
-        } else if ( e.getKeyCode() == KeyEvent.VK_UP) {
+        } else if (e.getKeyCode() == KeyEvent.VK_UP) {
             pacman.setSuunta(Hahmo.SUUNTA.YLOS);
-        } else if ( e.getKeyCode() == KeyEvent.VK_DOWN) {
+        } else if (e.getKeyCode() == KeyEvent.VK_DOWN) {
             pacman.setSuunta(Hahmo.SUUNTA.ALAS);
         }
-        
+
         component.repaint();
     }
 
     @Override
     public void keyReleased(KeyEvent ke) {
-        
+
     }
-    
+
 }

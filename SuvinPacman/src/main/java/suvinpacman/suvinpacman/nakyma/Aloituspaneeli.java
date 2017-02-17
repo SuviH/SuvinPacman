@@ -15,7 +15,8 @@ import suvinpacman.suvinpacman.malli.Malli;
  * @author suvi
  */
 /**
- * Aloituspaneeli, jossa peli on aloitustilassa, tasta luokasta peli alkaa ja siirtyy pelitilaan.
+ * Aloituspaneeli, jossa peli on aloitustilassa, tasta luokasta peli alkaa ja
+ * siirtyy pelitilaan.
  */
 public class Aloituspaneeli extends JPanel {
 

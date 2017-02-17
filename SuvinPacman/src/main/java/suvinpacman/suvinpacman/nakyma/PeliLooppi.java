@@ -12,10 +12,10 @@ import javax.swing.Timer;
  *
  * @author suvi
  */
-public class PeliLooppi extends Timer{
-    
+public class PeliLooppi extends Timer {
+
     public PeliLooppi(int i, ActionListener al) {
         super(i, al);
     }
-    
+
 }

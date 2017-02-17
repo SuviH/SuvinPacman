@@ -10,7 +10,8 @@ package suvinpacman.suvinpacman.malli;
  * @author suvi
  */
 /**
- * Luokka sisaltaa pelin logiikan, esimerkiksi tiedot mika tila pelissa kulloinkin on.
+ * Luokka sisaltaa pelin logiikan, esimerkiksi tiedot mika tila pelissa
+ * kulloinkin on.
  */
 public class Malli {
 
@@ -21,7 +22,6 @@ public class Malli {
         this.kentta = kentta;
         this.tila = PelinTila.ALOITUS;
     }
-    
 
     public enum PelinTila {
         ALOITUS, PELI;
@@ -46,6 +46,5 @@ public class Malli {
     public void setTila(PelinTila tila) {
         this.tila = tila;
     }
-    
 
 }

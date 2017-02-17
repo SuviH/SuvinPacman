@@ -42,9 +42,10 @@ public class Pacman extends Hahmo {
         }
         return false;
     }
+
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.yellow);
-        
+
         graphics.fillArc(x, y, 50, 50, 40, 280);
     }
 }

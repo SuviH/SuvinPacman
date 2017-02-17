@@ -29,36 +29,30 @@ public class Pelipaneeli extends JPanel implements ActionListener {
     private Nakyma nakyma;
     private NappaimistonKuuntelija nk;
     private PeliLooppi loop;
-    
-    
 
     public Pelipaneeli(Malli malli, Nakyma nakyma) {
         this.malli = malli;
         this.nakyma = nakyma;
-        
+
         this.setBackground(Color.BLACK);
-        
+
         this.nk = new NappaimistonKuuntelija(malli.getKentta().getPacman(), this);
         this.addKeyListener(nk);
         this.loop = new PeliLooppi(10, this);
         this.loop.start();
-      
-        
+
     }
 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
-        
+
         Pacman pacman = malli.getKentta().getPacman();
         pacman.piirra(g);
         for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
             huhuu.piirra(g);
         }
-        
-        
-        
-        
+
     }
 
     @Override
@@ -68,7 +62,7 @@ public class Pelipaneeli extends JPanel implements ActionListener {
             huhuu.liiku(malli.getKentta());
         }
         this.repaint();
-        
+
     }
 
 }
