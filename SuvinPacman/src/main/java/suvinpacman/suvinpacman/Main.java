@@ -5,6 +5,8 @@
  */
 package suvinpacman.suvinpacman;
 
+import javax.swing.SwingUtilities;
+import suvinpacman.suvinpacman.malli.Kentta;
 import suvinpacman.suvinpacman.malli.Malli;
 import suvinpacman.suvinpacman.nakyma.Nakyma;
 
@@ -15,7 +17,17 @@ import suvinpacman.suvinpacman.nakyma.Nakyma;
 public class Main {
 
     public static void main(String[] args) {
-        Nakyma nakyma = new Nakyma(new Malli());
+
+        SwingUtilities.invokeLater(new Runnable() {
+
+            @Override
+            public void run() {
+                Kentta kentta = new Kentta();
+                Malli malli = new Malli(kentta);
+                Nakyma nakyma = new Nakyma(malli);
+            }
+
+        });
 
     }
 }

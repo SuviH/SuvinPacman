@@ -5,6 +5,8 @@
  */
 package suvinpacman.suvinpacman.malli;
 
+import java.awt.Color;
+import java.awt.Graphics;
 import suvinpacman.suvinpacman.malli.Herkku;
 import suvinpacman.suvinpacman.malli.Hahmo;
 import java.util.ArrayList;
@@ -20,6 +22,7 @@ public class Pacman extends Hahmo {
 
     public Pacman(int x, int y) {
         super(x, y);
+        this.suunta = SUUNTA.OIKEA;
     }
 
     public boolean tormaaKummitukseen(ArrayList<Hahmo> kummitukset) {
@@ -38,5 +41,10 @@ public class Pacman extends Hahmo {
             }
         }
         return false;
+    }
+    public void piirra(Graphics graphics) {
+        graphics.setColor(Color.yellow);
+        
+        graphics.fillArc(x, y, 50, 50, 40, 280);
     }
 }

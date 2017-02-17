@@ -17,6 +17,12 @@ public class Malli {
     private Kentta kentta;
     private PelinTila tila;
 
+    public Malli(Kentta kentta) {
+        this.kentta = kentta;
+        this.tila = PelinTila.ALOITUS;
+    }
+    
+
     public enum PelinTila {
         ALOITUS, PELI;
     }
@@ -24,5 +30,22 @@ public class Malli {
     public void vaihdaPelinTila(PelinTila tila) {
         this.tila = tila;
     }
+
+    public Kentta getKentta() {
+        return kentta;
+    }
+
+    public PelinTila getTila() {
+        return tila;
+    }
+
+    public void setKentta(Kentta kentta) {
+        this.kentta = kentta;
+    }
+
+    public void setTila(PelinTila tila) {
+        this.tila = tila;
+    }
+    
 
 }

@@ -5,6 +5,7 @@
  */
 package suvinpacman.suvinpacman.malli;
 
+import java.awt.Graphics;
 import java.util.ArrayList;
 
 /**
@@ -12,7 +13,7 @@ import java.util.ArrayList;
  * @author suvi
  */
 /**
- * Abstrakti luokka Hahmo, Kummitus ja Pacman perivat luokan.
+ * Abstrakti luokka Hahmo, jonka Kummitus ja Pacman perivat.
  */
 public abstract class Hahmo {
 
@@ -84,5 +85,7 @@ public abstract class Hahmo {
     public int getY() {
         return y;
     }
+    
+    
 
 }

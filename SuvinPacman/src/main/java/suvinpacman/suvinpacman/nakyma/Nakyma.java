@@ -49,6 +49,9 @@ public class Nakyma extends JFrame {
             cl.show(paapaneeli, "aloitus");
         } else if (tila == PelinTila.PELI) {
             cl.show(paapaneeli, "peli");
+            this.pelipaneeli.setFocusable(true);
+            this.pelipaneeli.requestFocusInWindow();
         }
     }
+
 }
