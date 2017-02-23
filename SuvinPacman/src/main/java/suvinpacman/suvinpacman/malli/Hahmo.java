@@ -30,38 +30,6 @@ public abstract class Hahmo {
         YLOS, ALAS, VASEN, OIKEA;
     }
 
-    public void liiku(Kentta kentta) {
-        if (suunta == SUUNTA.YLOS) {
-            if (kentta.onkoKoordinaatissaSeina(this.x, this.y + 1)) {
-                suunta = SUUNTA.ALAS;
-            } else {
-                this.y--;
-            }
-
-        } else if (suunta == SUUNTA.ALAS) {
-            if (kentta.onkoKoordinaatissaSeina(this.x, this.y - 1)) {
-                suunta = SUUNTA.YLOS;
-            } else {
-                this.y++;
-            }
-
-        } else if (suunta == SUUNTA.VASEN) {
-            if (kentta.onkoKoordinaatissaSeina(this.x - 1, this.y)) {
-                suunta = SUUNTA.OIKEA;
-            } else {
-                this.x--;
-            }
-
-        } else if (suunta == SUUNTA.OIKEA) {
-            if (kentta.onkoKoordinaatissaSeina(this.x + 1, this.y)) {
-                suunta = SUUNTA.VASEN;
-            } else {
-                this.x++;
-            }
-
-        }
-    }
-
     public void setSuunta(SUUNTA suunta) {
         this.suunta = suunta;
     }

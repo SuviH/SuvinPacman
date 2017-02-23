@@ -27,14 +27,14 @@ public class SeinapalaTest {
 
     @Test
     public void testiSeinaSetX() {
-        Seinapala pala = new Seinapala();
+        Seinapala pala = new Seinapala(1,1,1,1);
         pala.setX(2);
         assertEquals(2, pala.getX());
     }
 
     @Test
     public void testiSeinaSetY() {
-        Seinapala pala = new Seinapala();
+        Seinapala pala = new Seinapala(1,1,1,1);
         pala.setY(2);
         assertEquals(2, pala.getY());
     }

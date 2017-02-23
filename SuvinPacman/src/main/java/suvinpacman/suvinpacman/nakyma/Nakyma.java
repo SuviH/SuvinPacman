@@ -51,6 +51,7 @@ public class Nakyma extends JFrame {
             cl.show(paapaneeli, "peli");
             this.pelipaneeli.setFocusable(true);
             this.pelipaneeli.requestFocusInWindow();
+            this.pelipaneeli.getLoop().restart();
         }
     }
 

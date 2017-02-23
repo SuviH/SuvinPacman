@@ -23,12 +23,16 @@ public class Kentta {
 
     public Kentta() {
         this.kummitukset = new ArrayList<>();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 50; i++) {
             this.kummitukset.add(new Kummitus(300, 250));
         }
         this.herkut = new ArrayList<>();
         this.seinat = new ArrayList<>();
-        this.pacman = new Pacman(0, 0);
+        seinat.add(new Seinapala(0,0,20, 480));
+        seinat.add(new Seinapala(0,0,640,20));
+        seinat.add(new Seinapala(620, 0, 20, 480));
+        seinat.add(new Seinapala(0, 460, 640, 20));
+        this.pacman = new Pacman(21, 21);
 
     }
 
@@ -72,7 +76,7 @@ public class Kentta {
 
     public boolean onkoKoordinaatissaSeina(int x, int y) {
         for (Seinapala seina : this.seinat) {
-            if (seina.getX() == x && seina.getY() == y) {
+            if (seina.getX() <= x && seina.getX()+seina.getX2() >= x && seina.getY() <= y && seina.getY()+seina.getY2() >= y) {
                 return true;
             }
         }

@@ -15,6 +15,7 @@ import suvinpacman.suvinpacman.malli.Kentta;
 import suvinpacman.suvinpacman.malli.Kummitus;
 import suvinpacman.suvinpacman.malli.Malli;
 import suvinpacman.suvinpacman.malli.Pacman;
+import suvinpacman.suvinpacman.malli.Seinapala;
 
 /**
  *
@@ -39,7 +40,7 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         this.nk = new NappaimistonKuuntelija(malli.getKentta().getPacman(), this);
         this.addKeyListener(nk);
         this.loop = new PeliLooppi(10, this);
-        this.loop.start();
+        
 
     }
 
@@ -51,6 +52,9 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         pacman.piirra(g);
         for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
             huhuu.piirra(g);
+        }
+        for (Seinapala seina : malli.getKentta().getSeinat()){
+            seina.piirra(g);
         }
 
     }
@@ -64,5 +68,10 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         this.repaint();
 
     }
+
+    public PeliLooppi getLoop() {
+        return loop;
+    }
+    
 
 }
