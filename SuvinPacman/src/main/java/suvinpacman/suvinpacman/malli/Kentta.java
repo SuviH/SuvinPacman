@@ -23,7 +23,7 @@ public class Kentta {
 
     public Kentta() {
         this.kummitukset = new ArrayList<>();
-        for (int i = 0; i < 50; i++) {
+        for (int i = 0; i < 10; i++) {
             this.kummitukset.add(new Kummitus(300, 250));
         }
         this.herkut = new ArrayList<>();
