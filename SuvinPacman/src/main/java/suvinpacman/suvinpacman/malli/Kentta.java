@@ -32,17 +32,24 @@ public class Kentta {
         seinat.add(new Seinapala(0,0,640,20));
         seinat.add(new Seinapala(620, 0, 20, 480));
         seinat.add(new Seinapala(0, 460, 640, 20));
+        seinat.add(new Seinapala(100, 90, 440, 20));
+        seinat.add(new Seinapala(100, 370, 440, 20));
+        this.lisaaHerkut();
         this.pacman = new Pacman(21, 21);
 
     }
 
     public void lisaaHerkut() {
-        int x = 0;
-        int y = 0;
-        for (int i = 0; i < 10; i++) {
-            this.herkut.add(new Herkku(x, y));
-            x = x + 10;
-            y = y + 10;
+        int x = 30;
+        int y = 35;
+        for (int i = 0; i < 11; i++) {
+            for (int j = 0; j < 15; j++) {
+                this.herkut.add(new Herkku(x, y));
+                x = x + 40;
+                
+            }
+            y = y + 40;
+            x = 30;
         }
     }
 
@@ -73,6 +80,8 @@ public class Kentta {
     public ArrayList<Seinapala> getSeinat() {
         return seinat;
     }
+    
+    
 
     public boolean onkoKoordinaatissaSeina(int x, int y) {
         for (Seinapala seina : this.seinat) {

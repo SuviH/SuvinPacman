@@ -5,6 +5,9 @@
  */
 package suvinpacman.suvinpacman.malli;
 
+import java.awt.Color;
+import java.awt.Graphics;
+
 /**
  *
  * @author suvi
@@ -20,6 +23,10 @@ public class Herkku {
     public Herkku(int x, int y) {
         this.x = x;
         this.y = y;
+    }
+    public void piirra(Graphics graphics){
+        graphics.setColor(Color.ORANGE);
+        graphics.fillOval(x, y, 10, 10);
     }
 
     public int getX() {

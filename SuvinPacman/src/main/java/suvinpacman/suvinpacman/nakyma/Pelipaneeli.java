@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
 import javax.swing.JPanel;
+import suvinpacman.suvinpacman.malli.Herkku;
 import suvinpacman.suvinpacman.malli.Kentta;
 import suvinpacman.suvinpacman.malli.Kummitus;
 import suvinpacman.suvinpacman.malli.Malli;
@@ -55,6 +56,9 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         }
         for (Seinapala seina : malli.getKentta().getSeinat()){
             seina.piirra(g);
+        }
+        for (Herkku herkku : malli.getKentta().getHerkut()) {
+            herkku.piirra(g);
         }
 
     }
