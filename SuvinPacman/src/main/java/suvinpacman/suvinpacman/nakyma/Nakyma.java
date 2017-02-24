@@ -42,7 +42,9 @@ public class Nakyma extends JFrame {
         this.add(paapaneeli);
 
     }
-
+/**
+ * Tarkastaa, onko pelin tila muuttunut, ja jos on, asettaa cardlayoutissa nakyviin tilaa vastaavan paneelin.
+ */
     public void pelinTilaMuuttunut(PelinTila tila) {
         CardLayout cl = (CardLayout) (this.paapaneeli.getLayout());
         if (tila == PelinTila.ALOITUS) {

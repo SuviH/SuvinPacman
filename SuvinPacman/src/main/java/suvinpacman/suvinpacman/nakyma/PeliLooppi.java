@@ -12,6 +12,9 @@ import javax.swing.Timer;
  *
  * @author suvi
  */
+/**
+ * PeliLooppi pyorittaa pelia.
+ */
 public class PeliLooppi extends Timer {
 
     public PeliLooppi(int i, ActionListener al) {

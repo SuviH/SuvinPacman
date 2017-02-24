@@ -15,6 +15,9 @@ import suvinpacman.suvinpacman.malli.Pacman;
  *
  * @author suvi
  */
+/**
+ * Tapahtumakuuntelija, joka kuuntelee nuolinappaimia, ja vaihtaa pacmanin suuntaa.
+ */
 public class NappaimistonKuuntelija implements KeyListener {
 
     private Pacman pacman;

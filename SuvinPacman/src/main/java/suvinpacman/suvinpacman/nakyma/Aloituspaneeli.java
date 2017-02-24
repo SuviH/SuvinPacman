@@ -23,7 +23,9 @@ public class Aloituspaneeli extends JPanel {
     private JButton aloitaNappi;
     private Malli malli;
     private Nakyma nakyma;
-
+/**
+ * Konstruktorissa asetetaan paneeliin aloitusnappi, tapahtumakuuntelija, seka nakyma ja malli.
+ */
     public Aloituspaneeli(Malli malli, Nakyma nakyma) {
         this.malli = malli;
         this.nakyma = nakyma;

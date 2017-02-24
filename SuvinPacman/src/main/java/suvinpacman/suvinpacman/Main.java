@@ -14,6 +14,9 @@ import suvinpacman.suvinpacman.nakyma.Nakyma;
  *
  * @author suvi
  */
+/**
+ * Peli kaynnistyy Main-luokasta.
+ */
 public class Main {
 
     public static void main(String[] args) {

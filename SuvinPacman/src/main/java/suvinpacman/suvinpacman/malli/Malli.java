@@ -22,11 +22,15 @@ public class Malli {
         this.kentta = kentta;
         this.tila = PelinTila.ALOITUS;
     }
-
+/**
+ * Enum pelinTila kuvaa pelin kahta vaihtoehtoista tilaa, joiden perusteella esim nakymassa nakyva paneeli valitaan.
+ */
     public enum PelinTila {
         ALOITUS, PELI;
     }
-
+/**
+ * Vaihtaa pelitilaksi parametrina olevan tilan.
+ */
     public void vaihdaPelinTila(PelinTila tila) {
         this.tila = tila;
     }

@@ -20,12 +20,16 @@ public abstract class Hahmo {
     protected int x;
     protected int y;
     protected SUUNTA suunta;
-
+/**
+ * Luo uuden Hahmo-luokan ilmentyman.
+ */
     public Hahmo(int x, int y) {
         this.x = x;
         this.y = y;
     }
-
+/**
+ * Enum-luokka suunta maarittaa hahmojen suunnan.
+ */
     public enum SUUNTA {
         YLOS, ALAS, VASEN, OIKEA;
     }

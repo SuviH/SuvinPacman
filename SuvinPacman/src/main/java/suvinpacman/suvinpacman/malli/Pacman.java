@@ -19,12 +19,16 @@ import java.util.ArrayList;
  * Hahmo-luokan periva luokka, pelin pacman-hahmo.
  */
 public class Pacman extends Hahmo {
-
+/**
+ * Luo Pacman-olion, aloitussuuntana oikea.
+ */
     public Pacman(int x, int y) {
         super(x, y);
         this.suunta = SUUNTA.OIKEA;
     }
-
+/**
+ * Jos pacman tormaa kummitukseen, palauttaa true, muutoin false.
+ */
     public boolean tormaaKummitukseen(ArrayList<Hahmo> kummitukset) {
         for (Hahmo hahmo : kummitukset) {
             if (this.x == hahmo.getX() && this.y == hahmo.getY()) {
@@ -33,7 +37,9 @@ public class Pacman extends Hahmo {
         }
         return false;
     }
-
+/**
+ * Jos pacman tormaa herkkuun, palauttaa true, muutoin false.
+ */
     public boolean tormaaHerkkuun(ArrayList<Herkku> herkut) {
         for (Herkku herkku : herkut) {
             if (this.x == herkku.getX() && this.y == herkku.getY()) {
@@ -42,7 +48,9 @@ public class Pacman extends Hahmo {
         }
         return false;
     }
-
+/**
+ * Piirtaa pacmanin.
+ */
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.yellow);
         if (this.suunta == SUUNTA.OIKEA) {
@@ -56,7 +64,9 @@ public class Pacman extends Hahmo {
         }
 
     }
-
+/**
+ * Pacmanin liikkumismetodi, jos pacman on tormaamassa seinaan vaihtaa suuntaa vastakkaiseen suuntaan, muutoin muokkaa koordinaatteja niin etta pacman liikkuu suuntaansa.
+ */
     public void liiku(Kentta kentta) {
         if (suunta == SUUNTA.YLOS) {
             if (kentta.onkoKoordinaatissaSeina(this.x + 20, this.y - 1)) {
