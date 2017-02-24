@@ -41,7 +41,6 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         this.nk = new NappaimistonKuuntelija(malli.getKentta().getPacman(), this);
         this.addKeyListener(nk);
         this.loop = new PeliLooppi(10, this);
-        
 
     }
 
@@ -54,7 +53,7 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
             huhuu.piirra(g);
         }
-        for (Seinapala seina : malli.getKentta().getSeinat()){
+        for (Seinapala seina : malli.getKentta().getSeinat()) {
             seina.piirra(g);
         }
         for (Herkku herkku : malli.getKentta().getHerkut()) {
@@ -76,6 +75,5 @@ public class Pelipaneeli extends JPanel implements ActionListener {
     public PeliLooppi getLoop() {
         return loop;
     }
-    
 
 }

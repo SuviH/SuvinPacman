@@ -24,7 +24,8 @@ public class Herkku {
         this.x = x;
         this.y = y;
     }
-    public void piirra(Graphics graphics){
+
+    public void piirra(Graphics graphics) {
         graphics.setColor(Color.ORANGE);
         graphics.fillOval(x, y, 10, 10);
     }

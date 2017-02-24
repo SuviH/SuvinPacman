@@ -30,25 +30,36 @@ public class KenttaTest {
     }
 
     @Test
-    public void testiAlussaHerkkujaEiOle() {
+    public void testiOnkoHerkutSyotyTrue() {
+        kentta.getHerkut().clear();
         assertTrue(kentta.onkoKaikkiHerkutSyoty());
     }
 
     @Test
-    public void testiKummituksiaLisataanKolme() {
-        assertEquals(3, kentta.getKummitukset().size());
+    public void testiKummituksiaLisataanKymmenen() {
+        assertEquals(10, kentta.getKummitukset().size());
     }
 
     @Test
-    public void testiHerkkujenLisaysOnnistuu() {
-        kentta.lisaaHerkut();
+    public void testiOnkoHerkutSyotyFalse() {
+
         assertFalse(kentta.onkoKaikkiHerkutSyoty());
     }
 
     @Test
-    public void testiHerkkujenLisaysLisaaKymmenen() {
-        kentta.lisaaHerkut();
-        assertEquals(10, kentta.getHerkut().size());
+    public void testiHerkkujenLisaysOnnistuu() {
+
+        assertEquals(165, kentta.getHerkut().size());
+    }
+
+    @Test
+    public void testiOnkoKoordinaatissaSeinaTrue() {
+        assertTrue(kentta.onkoKoordinaatissaSeina(1, 1));
+    }
+
+    @Test
+    public void testiOnkoKoordinaatissaSeinaFalse() {
+        assertFalse(kentta.onkoKoordinaatissaSeina(30, 30));
     }
 
 }

@@ -18,24 +18,37 @@ import static org.junit.Assert.*;
  */
 public class SeinapalaTest {
 
+    private Seinapala pala;
+
     public SeinapalaTest() {
     }
 
     @Before
     public void setUp() {
+        pala = new Seinapala(0, 0, 10, 10);
     }
 
     @Test
     public void testiSeinaSetX() {
-        Seinapala pala = new Seinapala(1,1,1,1);
         pala.setX(2);
         assertEquals(2, pala.getX());
     }
 
     @Test
     public void testiSeinaSetY() {
-        Seinapala pala = new Seinapala(1,1,1,1);
         pala.setY(2);
         assertEquals(2, pala.getY());
+    }
+
+    @Test
+    public void testiSeinaSetX2() {
+        pala.setX2(2);
+        assertEquals(2, pala.getX2());
+    }
+
+    @Test
+    public void testiSeinaSetY2() {
+        pala.setY2(2);
+        assertEquals(2, pala.getY2());
     }
 }

@@ -25,7 +25,7 @@ public class KummitusTest {
 
     @Before
     public void setUp() {
-        this.huhuu = new Kummitus(1, 1);
+        this.huhuu = new Kummitus(21, 21);
     }
 
     @Test
@@ -35,27 +35,77 @@ public class KummitusTest {
     }
 
     @Test
+    public void testiKummitusSaaKonstruktorissaSuunnan() {
+        assertTrue(huhuu.getSuunta() != null);
+    }
+
+    @Test
     public void testiKummitusXKoordinaatinAsettaminenToimii() {
-        assertEquals(1, huhuu.getX());
+        assertEquals(21, huhuu.getX());
     }
 
     @Test
     public void testiKummitusYKoordinaatinAsettaminenToimii() {
-        assertEquals(1, huhuu.getY());
+        assertEquals(21, huhuu.getY());
     }
 
     @Test
     public void kummituksenLiikkuminenToimiiYAkseli() {
         huhuu.setSuunta(Hahmo.SUUNTA.ALAS);
         huhuu.liiku(new Kentta());
-        assertEquals(2, huhuu.getY());
+        assertEquals(22, huhuu.getY());
     }
 
     @Test
     public void kummituksenLiikkuminenToimiiXAkseli() {
         huhuu.setSuunta(Hahmo.SUUNTA.OIKEA);
         huhuu.liiku(new Kentta());
-        assertEquals(2, huhuu.getX());
+        assertEquals(22, huhuu.getX());
+    }
+
+    @Test
+    public void uudenSuunnanArpominenToimii() {
+        Hahmo.SUUNTA suunta = huhuu.getSuunta();
+        huhuu.arvoUusiSuunta();
+        assertTrue(suunta != huhuu.getSuunta());
+    }
+
+    @Test
+    public void kummitusVaihtaaSuuntaaKunTormaaSeinaanYlos() {
+        huhuu.setSuunta(Hahmo.SUUNTA.YLOS);
+        huhuu.liiku(new Kentta());
+        assertFalse(Hahmo.SUUNTA.YLOS == huhuu.getSuunta());
+    }
+
+    @Test
+    public void kummitusVaihtaaSuuntaaKunTormaaSeinaanVasen() {
+        huhuu.setSuunta(Hahmo.SUUNTA.VASEN);
+        huhuu.liiku(new Kentta());
+        assertFalse(Hahmo.SUUNTA.VASEN == huhuu.getSuunta());
+    }
+
+    @Test
+    public void kummitusVaihtaaSuuntaaKunTormaaSeinaanAlas() {
+        huhuu.setSuunta(Hahmo.SUUNTA.ALAS);
+        huhuu.setY(429);
+        huhuu.liiku(new Kentta());
+        assertFalse(Hahmo.SUUNTA.ALAS == huhuu.getSuunta());
+    }
+
+    @Test
+    public void kummitusVaihtaaSuuntaaKunTormaaSeinaanOikea() {
+        huhuu.setSuunta(Hahmo.SUUNTA.OIKEA);
+        huhuu.setX(589);
+        huhuu.liiku(new Kentta());
+        assertFalse(Hahmo.SUUNTA.OIKEA == huhuu.getSuunta());
+    }
+
+    @Test
+    public void kummitusVaihtaaSuuntaaKunLaskuriTaynna() {
+        Hahmo.SUUNTA suunta = huhuu.getSuunta();
+        huhuu.setLaskuri(250);
+        huhuu.liiku(new Kentta());
+        assertTrue(suunta != huhuu.getSuunta());
     }
 
 }

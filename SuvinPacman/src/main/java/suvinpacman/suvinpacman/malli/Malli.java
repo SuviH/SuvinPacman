@@ -39,12 +39,4 @@ public class Malli {
         return tila;
     }
 
-    public void setKentta(Kentta kentta) {
-        this.kentta = kentta;
-    }
-
-    public void setTila(PelinTila tila) {
-        this.tila = tila;
-    }
-
 }

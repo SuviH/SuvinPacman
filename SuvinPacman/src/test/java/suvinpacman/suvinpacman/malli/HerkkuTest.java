@@ -18,11 +18,26 @@ import static org.junit.Assert.*;
  */
 public class HerkkuTest {
 
+    private Herkku herkku;
+
     public HerkkuTest() {
     }
 
     @Before
     public void setUp() {
+        herkku = new Herkku(21, 21);
+    }
+
+    @Test
+    public void setXToimii() {
+        herkku.setX(32);
+        assertEquals(32, herkku.getX());
+    }
+
+    @Test
+    public void setYToimii() {
+        herkku.setY(32);
+        assertEquals(32, herkku.getY());
     }
 
 }

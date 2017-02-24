@@ -18,13 +18,13 @@ import suvinpacman.suvinpacman.malli.Hahmo;
  * Hahmo-luokan periva luokka, pelin kummitus-hahmot.
  */
 public class Kummitus extends Hahmo {
+
     private int laskuri;
 
     public Kummitus(int x, int y) {
         super(x, y);
         arvoSuunta();
         laskuri = 0;
-        
 
     }
 
@@ -42,23 +42,23 @@ public class Kummitus extends Hahmo {
 
     public void liiku(Kentta kentta) {
         if (suunta == SUUNTA.YLOS) {
-            if (kentta.onkoKoordinaatissaSeina(this.x+15, this.y - 1) || laskuri == 250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x + 15, this.y - 1) || laskuri == 250) {
                 this.arvoUusiSuunta();
-                laskuri=0;
+                laskuri = 0;
             } else {
                 this.y--;
             }
 
         } else if (suunta == SUUNTA.ALAS) {
-            if (kentta.onkoKoordinaatissaSeina(this.x+15, this.y + 31) || laskuri == 250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x + 15, this.y + 31) || laskuri == 250) {
                 this.arvoUusiSuunta();
-                laskuri =0;
+                laskuri = 0;
             } else {
                 this.y++;
             }
 
         } else if (suunta == SUUNTA.VASEN) {
-            if (kentta.onkoKoordinaatissaSeina(this.x - 1, this.y+15) || laskuri == 250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x - 1, this.y + 15) || laskuri == 250) {
                 this.arvoUusiSuunta();
                 laskuri = 0;
             } else {
@@ -66,9 +66,9 @@ public class Kummitus extends Hahmo {
             }
 
         } else if (suunta == SUUNTA.OIKEA) {
-            if (kentta.onkoKoordinaatissaSeina(this.x + 30 + 1, this.y+15) || laskuri ==250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x + 30 + 1, this.y + 15) || laskuri == 250) {
                 this.arvoUusiSuunta();
-                laskuri =0;
+                laskuri = 0;
             } else {
                 this.x++;
             }
@@ -98,6 +98,14 @@ public class Kummitus extends Hahmo {
             arvoSuunta();
         }
 
+    }
+
+    public void setLaskuri(int laskuri) {
+        this.laskuri = laskuri;
+    }
+
+    public int getLaskuri() {
+        return laskuri;
     }
 
 }

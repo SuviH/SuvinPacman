@@ -28,7 +28,8 @@ public class Seinapala {
         this.x2 = x2;
         this.y2 = y2;
     }
-    public void piirra(Graphics graphics){
+
+    public void piirra(Graphics graphics) {
         graphics.setColor(Color.RED);
         graphics.fillRect(x, y, x2, y2);
     }
@@ -64,6 +65,5 @@ public class Seinapala {
     public void setY2(int y2) {
         this.y2 = y2;
     }
-    
 
 }
