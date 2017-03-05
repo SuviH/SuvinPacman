@@ -19,4 +19,8 @@ Seuraavassa sekvenssikaaviossa kuvaa olioiden välistä vuorovaikutusta tilantee
 
 ![Sekvenssikaavio](/dokumentaatio/IMG_2191.JPG)
 
+Seuraava kaavio taas kuvaa olioiden välistä vuorovaikutusta tilanteessa, jossa pelaaja painaa nuolinäppäintä ja pacman kääntyy oikealle. Nuolinäppäimen painaminen käynnistää NäppäimistönKuuntelija-luokan metodin keyPressed suorituksen.
+
+![Sekvenssikaavio](/dokumentaatio/IMG_2204.JPG)
+
 
