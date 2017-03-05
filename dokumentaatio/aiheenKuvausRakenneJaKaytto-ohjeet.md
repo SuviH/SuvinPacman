@@ -11,6 +11,8 @@ Kun peli käynnistetään, siirrytään aloitusruutuun, josta löytyy nappula "A
 Ohjelma on jaettu pakkauksiin Malli ja Nakyma. Pakkauksesta Malli löytyvät ohjelman kaikki palaset, kuten Pacman, Kummitus ja Kentta. Luokka Kentta sisältää kentällä näkyvät palaset, eli pacmanin, kummitukset, seinat ja herkut. Luokka Hahmo on abstrakti luokka, jonka luokat Pacman ja Kummitus perivät. Pakkauksesta löytyy myös luokka Malli, joka sisältää ohjelman toimintalogiikan.
 Nakyma-pakkauksessa on ohjelman käyttöliittymäpuoli. Nakymaan kuuluvat Aloituspaneeli ja Pelipaneeli, joista näytetään aina jompaakumpaa pelin tilasta riippuen. Näiden luokkien toimintaa ohjaamaan on luotu kuuntelijat ButtonListener ja NappaimistonKuuntelija. Lisäksi pakkauksessa on luokka PeliLooppi, joka huolehtii ohjelman pyörittämisestä Timer-luokan avulla.
 
+### Testeistä
+Pakkauksesta malli löytyvien luokkien Pacman, Kummitus ja Seinäpala piirtämistä ei ole testattu, sillä ne kuuluvat käyttöliittymäpuoleen. Tämä heikentää testien rivikattavuutta.
 
 
 ![Luokkakaavio](/dokumentaatio/PacmanLuokkakaavio.png)
