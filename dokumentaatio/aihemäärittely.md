@@ -14,8 +14,11 @@ Nakyma-pakkauksessa on ohjelman käyttöliittymäpuoli. Nakymaan kuuluvat Aloitu
 ### Testeistä
 Pakkauksesta malli löytyvien luokkien Pacman, Kummitus ja Seinäpala piirtämistä ei ole testattu, sillä ne kuuluvat käyttöliittymäpuoleen. Tämä heikentää testien rivikattavuutta.
 
+### Luokkakaavio
 
 ![Luokkakaavio](/dokumentaatio/PacmanLuokkakaavio.png)
+
+### Sekvenssikaavioita
 
 Seuraavassa sekvenssikaaviossa kuvaa olioiden välistä vuorovaikutusta tilanteessa, jossa "Aloita"-nappia painetaan, eli jossa ButtonListener-luokan actionPerformed-metodin suoritus lähtee liikkeelle. Napin painaminen aiheuttaa uuden pelin alustamisen ja käynnistymisen.
 
