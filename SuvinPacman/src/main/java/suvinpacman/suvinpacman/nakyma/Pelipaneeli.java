@@ -36,8 +36,10 @@ public class Pelipaneeli extends JPanel implements ActionListener {
     private Nakyma nakyma;
     private NappaimistonKuuntelija nk;
     private PeliLooppi loop;
+
     /**
      * Pelipaneelin luova konstruktori.
+     *
      * @param malli parametrina valitettava malli
      * @param nakyma parametrina valitettava nakyma
      */

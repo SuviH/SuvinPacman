@@ -50,17 +50,33 @@ public class KummitusTest {
     }
 
     @Test
-    public void kummituksenLiikkuminenToimiiYAkseli() {
+    public void kummituksenLiikkuminenToimiiYlos() {
+        huhuu.setSuunta(Hahmo.SUUNTA.YLOS);
+        huhuu.setX(22);
+        huhuu.liiku(new Kentta());
+        assertEquals(21, huhuu.getY());
+    }
+
+    @Test
+    public void kummituksenLiikkuminenToimiiAlas() {
         huhuu.setSuunta(Hahmo.SUUNTA.ALAS);
         huhuu.liiku(new Kentta());
         assertEquals(22, huhuu.getY());
     }
 
     @Test
-    public void kummituksenLiikkuminenToimiiXAkseli() {
+    public void kummituksenLiikkuminenToimiiOikealle() {
         huhuu.setSuunta(Hahmo.SUUNTA.OIKEA);
         huhuu.liiku(new Kentta());
         assertEquals(22, huhuu.getX());
+    }
+
+    @Test
+    public void kummituksenLiikkuminenToimiiVasemmalle() {
+        huhuu.setSuunta(Hahmo.SUUNTA.VASEN);
+        huhuu.setX(22);
+        huhuu.liiku(new Kentta());
+        assertEquals(21, huhuu.getX());
     }
 
     @Test

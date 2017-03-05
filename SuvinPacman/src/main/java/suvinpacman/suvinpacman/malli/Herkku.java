@@ -22,6 +22,7 @@ public class Herkku {
 
     /**
      * Luo uuden herkun koordinaattiin x,y.
+     *
      * @param x x-koordinaatti
      * @param y y-koordinaatti
      */
@@ -32,7 +33,9 @@ public class Herkku {
 
     /**
      * Piirtaa herkun.
-     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen tapahtuu
+     *
+     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen
+     * tapahtuu
      */
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.ORANGE);

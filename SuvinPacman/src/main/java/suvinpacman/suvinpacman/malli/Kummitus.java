@@ -24,6 +24,7 @@ public class Kummitus extends Hahmo {
     /**
      * Luo uuden kummituksen, ja arpoo sille satunnaisen aloitussuunnan, ja
      * alustaa laskurin, jonka avulla tarkastetaan, onko aika arpoa uusi suunta.
+     *
      * @param x kummituksen x-koordinaatti
      * @param y kummituksen y-koordinaatti
      */
@@ -36,7 +37,9 @@ public class Kummitus extends Hahmo {
 
     /**
      * Piirtaa kummituksen.
-     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen tapahtuu.
+     *
+     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen
+     * tapahtuu.
      *
      */
     public void piirra(Graphics graphics) {
@@ -56,8 +59,9 @@ public class Kummitus extends Hahmo {
      * tai jos kummitus on tormaamassa seinaan, muutoin vaihtaa kummituksen
      * koordinaatteja suunnasta riippuen, lisaksi metodi kasvattaa laskurin
      * arvoa yhdella.
+     *
      * @param kentta metodi saa parametrina kentan, jossa liikkuminen tapahtuu
-     * 
+     *
      */
     public void liiku(Kentta kentta) {
         if (suunta == SUUNTA.YLOS) {

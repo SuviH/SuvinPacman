@@ -23,6 +23,7 @@ public abstract class Hahmo {
 
     /**
      * Luo uuden Hahmo-luokan ilmentyman.
+     *
      * @param x x-koordinaatti
      * @param y y-koordinaatti
      */

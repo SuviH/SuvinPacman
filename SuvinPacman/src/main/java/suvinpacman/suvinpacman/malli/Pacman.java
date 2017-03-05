@@ -22,6 +22,7 @@ public class Pacman extends Hahmo {
 
     /**
      * Luo Pacman-olion, aloitussuuntana oikea.
+     *
      * @param x x-koordinaatti
      * @param y y-koordinaatti
      */
@@ -32,7 +33,9 @@ public class Pacman extends Hahmo {
 
     /**
      * Jos pacman tormaa kummitukseen, palauttaa true, muutoin false.
-     * @param kummitukset parametrina kummitukset, joihin tormaamista tarkastellaan
+     *
+     * @param kummitukset parametrina kummitukset, joihin tormaamista
+     * tarkastellaan
      * @return totuusarvo, tormataanko kummitukseen
      */
     public boolean tormaaKummitukseen(ArrayList<Kummitus> kummitukset) {
@@ -40,7 +43,7 @@ public class Pacman extends Hahmo {
             int huhuux = huhuu.getX() + 15;
             int huhuuy = huhuu.getY() + 15;
             double etaisyys = Math.sqrt(Math.pow(x + 20 - huhuux, 2) + Math.pow(y + 20 - huhuuy, 2));
-            if (etaisyys - 20 - 12 <= 0) {
+            if (etaisyys <= 32) {
                 return true;
             }
         }
@@ -49,6 +52,7 @@ public class Pacman extends Hahmo {
 
     /**
      * Jos pacman tormaa herkkuun, palauttaa true, muutoin false.
+     *
      * @param herkku herkku, johon tormaamista tarkastellaan
      * @return totuusarvo, tormataanko herkkuun
      */
@@ -57,7 +61,7 @@ public class Pacman extends Hahmo {
         int herkkux = herkku.getX() + 5;
         int herkkuy = herkku.getY() + 5;
         double etaisyys = Math.sqrt(Math.pow(x + 20 - herkkux, 2) + Math.pow(y + 20 - herkkuy, 2));
-        if (etaisyys - 20 <= 0) {
+        if (etaisyys <= 20) {
             return true;
         }
 
@@ -66,7 +70,9 @@ public class Pacman extends Hahmo {
 
     /**
      * Piirtaa pacmanin.
-     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen tehdaan
+     *
+     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen
+     * tehdaan
      */
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.yellow);
@@ -86,6 +92,7 @@ public class Pacman extends Hahmo {
      * Pacmanin liikkumismetodi, jos pacman on tormaamassa seinaan vaihtaa
      * suuntaa vastakkaiseen suuntaan, muutoin muokkaa koordinaatteja niin etta
      * pacman liikkuu suuntaansa.
+     *
      * @param kentta parametrina kentta, jolla liikutaan
      */
     public void liiku(Kentta kentta) {

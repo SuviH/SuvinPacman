@@ -17,10 +17,12 @@ public class Malli {
 
     private Kentta kentta;
     private PelinTila tila;
-/**
- * Malli-luokan konstruktori, jossa uusi peli alustetaan ja pelitilaksi asetetaan aloitus.
- * 
- */
+
+    /**
+     * Malli-luokan konstruktori, jossa uusi peli alustetaan ja pelitilaksi
+     * asetetaan aloitus.
+     *
+     */
     public Malli() {
         this.alustaUusiPeli();
         this.tila = PelinTila.ALOITUS;
@@ -36,6 +38,7 @@ public class Malli {
 
     /**
      * Vaihtaa pelitilaksi parametrina olevan tilan.
+     *
      * @param tila asetettava pelitila
      */
     public void vaihdaPelinTila(PelinTila tila) {
@@ -45,16 +48,20 @@ public class Malli {
     public Kentta getKentta() {
         return kentta;
     }
+
     /**
      * Palauttaa tiettyna hetkena voimassa olevan pelitilan.
+     *
      * @return pelitila
      */
-    
+
     public PelinTila getTila() {
         return tila;
     }
+
     /**
-     * Alustaa uuden kentan uutta pelia varten, eli luo uudet pacman-, kummitus-, herkku ja seinapalaoliot.
+     * Alustaa uuden kentan uutta pelia varten, eli luo uudet pacman-,
+     * kummitus-, herkku ja seinapalaoliot.
      */
 
     public void alustaUusiPeli() {

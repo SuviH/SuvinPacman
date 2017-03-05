@@ -27,6 +27,7 @@ public class Aloituspaneeli extends JPanel {
     /**
      * Konstruktorissa asetetaan paneeliin aloitusnappi, tapahtumakuuntelija,
      * seka nakyma ja malli.
+     *
      * @param malli konstruktorissa valitettava malli
      * @param nakyma konstruktorissa valitettava nakyma
      */

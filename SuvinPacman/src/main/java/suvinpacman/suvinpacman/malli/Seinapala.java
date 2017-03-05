@@ -24,6 +24,7 @@ public class Seinapala {
 
     /**
      * Luo seinapalan koordinaattiin x,y, seinapalan leveys on x2 ja korkeus y2.
+     *
      * @param x x-koordinaatti
      * @param y y-koordinaatti
      * @param x2 leveys
@@ -38,7 +39,9 @@ public class Seinapala {
 
     /**
      * Piirtaa seinapalan.
-     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen tehdaan
+     *
+     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen
+     * tehdaan
      */
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.RED);

@@ -29,8 +29,11 @@ public class Nakyma extends JFrame implements ActionListener {
     private Pelipaneeli pelipaneeli;
     private Malli malli;
     private Timer ajastin;
+
     /**
-     * Luokan konstruktori, jossa luodaan pelin ruutu, ja lisataan paneelit aloitus- ja pelipaneeli.
+     * Luokan konstruktori, jossa luodaan pelin ruutu, ja lisataan paneelit
+     * aloitus- ja pelipaneeli.
+     *
      * @param malli nakymalle valitettava malli
      */
 
@@ -55,6 +58,7 @@ public class Nakyma extends JFrame implements ActionListener {
     /**
      * Tarkastaa, onko pelin tila muuttunut, ja jos on, asettaa cardlayoutissa
      * nakyviin tilaa vastaavan paneelin.
+     *
      * @param tila tila, johon halutaan pelin siirtyvan
      */
     public void pelinTilaMuuttunut(PelinTila tila) {

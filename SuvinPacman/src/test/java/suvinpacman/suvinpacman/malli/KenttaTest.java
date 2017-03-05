@@ -62,4 +62,14 @@ public class KenttaTest {
         assertFalse(kentta.onkoKoordinaatissaSeina(30, 30));
     }
 
+    @Test
+    public void getpacman() {
+        assertTrue(kentta.getPacman() != null);
+    }
+
+    @Test
+    public void getseinat() {
+        assertTrue(kentta.getSeinat() != null);
+    }
+
 }

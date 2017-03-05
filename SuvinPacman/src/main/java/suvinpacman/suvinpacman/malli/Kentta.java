@@ -62,6 +62,7 @@ public class Kentta {
     /**
      * Palauttaa true, jos Pacman on syonyt kentan kaikki herkut, ja false jos
      * herkkuja on viela jaljella.
+     *
      * @return totuusarvo, onko herkut syoty
      */
     public boolean onkoKaikkiHerkutSyoty() {
@@ -95,6 +96,7 @@ public class Kentta {
     /**
      * Tarkastaa, onko annetussa koordinaatissa seinaa, ja palauttaa true, jos
      * on ja false, jos ei.
+     *
      * @param x x-koordinaatti, josta seinan olemassaoloa tarkistetaan
      * @param y y-koordinaatti, josta seinan olemassaoloa tarkistetaan
      * @return totuusarvo, onko koordinaatissa seina

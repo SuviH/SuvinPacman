@@ -22,8 +22,10 @@ public class ButtonListener implements ActionListener {
 
     private Malli malli;
     private Nakyma nakyma;
+
     /**
      * ButtonListener-luokan konstruktori.
+     *
      * @param malli valitettava malli
      * @param nakyma valitettava nakyma
      */

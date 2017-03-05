@@ -52,32 +52,66 @@ public class PacmanTest {
     }
 
     @Test
-    public void testiPacmaninLiikkuminenToimiiYAkseli() {
+    public void testiPacmaninLiikkuminenToimiiYlos() {
+        pacman.setSuunta(SUUNTA.YLOS);
+        pacman.setY(22);
+        pacman.liiku(new Kentta());
+        assertEquals(21, pacman.getY());
+    }
+
+    @Test
+    public void testiPacmaninLiikkuminenToimiiAlas() {
         pacman.setSuunta(SUUNTA.ALAS);
         pacman.liiku(new Kentta());
         assertEquals(22, pacman.getY());
     }
 
     @Test
-    public void testiPacmaninLiikkuminenToimiiXAkseli() {
+    public void testiPacmaninLiikkuminenToimiiOikealle() {
         pacman.setSuunta(SUUNTA.OIKEA);
         pacman.liiku(new Kentta());
         assertEquals(22, pacman.getX());
     }
 
     @Test
-    public void testiTormaaKummitukseenKunTrue() {
-        Kummitus huhuu = new Kummitus(21, 21);
-        Kummitus hohoo = new Kummitus(100, 100);
+    public void testiPacmaninLiikkuminenToimiiVasemmalle() {
+        pacman.setSuunta(SUUNTA.VASEN);
+        pacman.setX(22);
+        pacman.liiku(new Kentta());
+        assertEquals(21, pacman.getX());
+    }
+
+    @Test
+    public void testiTormaaKummitukseenTrueRajalla() {
+        Kummitus huhuu = new Kummitus(58, 26);
+
         ArrayList<Kummitus> kummitukset = new ArrayList<>();
         kummitukset.add(huhuu);
-        kummitukset.add(hohoo);
 
         assertTrue(pacman.tormaaKummitukseen(kummitukset));
     }
 
     @Test
-    public void testiTormaaKummitukseenKunFalse() {
+    public void testiTormaaKummitukseenTrue() {
+        Kummitus huhuu = new Kummitus(21, 21);
+
+        ArrayList<Kummitus> kummitukset = new ArrayList<>();
+        kummitukset.add(huhuu);
+
+        assertTrue(pacman.tormaaKummitukseen(kummitukset));
+    }
+
+    @Test
+    public void testiTormaaKummitukseenFalseLahella() {
+        Kummitus huhuu = new Kummitus(59, 27);
+        ArrayList<Kummitus> kummitukset = new ArrayList<>();
+        kummitukset.add(huhuu);
+
+        assertFalse(pacman.tormaaKummitukseen(kummitukset));
+    }
+
+    @Test
+    public void testiTormaaKummitukseenFalseKaukana() {
         Kummitus huhuu = new Kummitus(100, 100);
         Kummitus hohoo = new Kummitus(200, 200);
         ArrayList<Kummitus> kummitukset = new ArrayList<>();
@@ -88,14 +122,26 @@ public class PacmanTest {
     }
 
     @Test
-    public void testiTormaaHerkkuunKunTrue() {
-        Herkku herkku = new Herkku(41, 41);
+    public void testiTormaaHerkkuunTrue() {
+        Herkku herkku = new Herkku(50, 50);
         assertTrue(pacman.tormaaHerkkuun(herkku));
     }
 
     @Test
-    public void testiTormaaHerkkuunKunFalse() {
-        Herkku herkku = new Herkku(60, 60);
+    public void testiTormaaHerkkuunTrueRajalla() {
+        Herkku herkku = new Herkku(56, 36);
+        assertTrue(pacman.tormaaHerkkuun(herkku));
+    }
+
+    @Test
+    public void testiTormaaHerkkuunFalseLahella() {
+        Herkku herkku = new Herkku(57, 37);
+        assertFalse(pacman.tormaaHerkkuun(herkku));
+    }
+
+    @Test
+    public void testiTormaaHerkkuunFalseKaukana() {
+        Herkku herkku = new Herkku(300, 300);
         assertFalse(pacman.tormaaHerkkuun(herkku));
     }
 

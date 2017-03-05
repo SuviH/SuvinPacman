@@ -23,8 +23,11 @@ public class NappaimistonKuuntelija implements KeyListener {
 
     private Pacman pacman;
     private Component component;
+
     /**
-     * NappaimistonKuuntelijan luova konstruktori, jossa kuuntelijaan liitetaan komponentti pelipaneeli.
+     * NappaimistonKuuntelijan luova konstruktori, jossa kuuntelijaan liitetaan
+     * komponentti pelipaneeli.
+     *
      * @param component komponentti, johon kuuntelija liitetaan
      */
 
