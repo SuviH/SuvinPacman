@@ -19,18 +19,21 @@ public class Herkku {
 
     private int x;
     private int y;
-    
-/**
- * Luo uuden herkun koordinaattiin x,y.
- */
+
+    /**
+     * Luo uuden herkun koordinaattiin x,y.
+     * @param x x-koordinaatti
+     * @param y y-koordinaatti
+     */
     public Herkku(int x, int y) {
         this.x = x;
         this.y = y;
     }
-    
-/**
- * Piirtaa herkun.
- */
+
+    /**
+     * Piirtaa herkun.
+     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen tapahtuu
+     */
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.ORANGE);
         graphics.fillOval(x, y, 10, 10);

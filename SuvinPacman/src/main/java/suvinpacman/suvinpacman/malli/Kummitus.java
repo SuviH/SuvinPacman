@@ -20,18 +20,25 @@ import suvinpacman.suvinpacman.malli.Hahmo;
 public class Kummitus extends Hahmo {
 
     private int laskuri;
-/**
- * Luo uuden kummituksen, ja arpoo sille satunnaisen aloitussuunnan, ja alustaa laskurin, jonka avulla tarkastetaan, onko aika arpoa uusi suunta.
- */
+
+    /**
+     * Luo uuden kummituksen, ja arpoo sille satunnaisen aloitussuunnan, ja
+     * alustaa laskurin, jonka avulla tarkastetaan, onko aika arpoa uusi suunta.
+     * @param x kummituksen x-koordinaatti
+     * @param y kummituksen y-koordinaatti
+     */
     public Kummitus(int x, int y) {
         super(x, y);
         arvoSuunta();
         laskuri = 0;
 
     }
-/**
- * Piirtaa kummituksen.
- */
+
+    /**
+     * Piirtaa kummituksen.
+     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen tapahtuu.
+     *
+     */
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.PINK);
         graphics.fillOval(x, y, 30, 30);
@@ -43,9 +50,15 @@ public class Kummitus extends Hahmo {
         graphics.fillOval(x + 19, y + 11, 3, 3);
 
     }
-/**
- * Kummituksen liikkumismetodi, arpoo uuden suunnan jos laskuri on taynna tai jos kummitus on tormaamassa seinaan, muutoin vaihtaa kummituksen koordinaatteja suunnasta riippuen, lisaksi metodi kasvattaa laskurin arvoa yhdella.
- */
+
+    /**
+     * Kummituksen liikkumismetodi, arpoo uuden suunnan jos laskuri on taynna
+     * tai jos kummitus on tormaamassa seinaan, muutoin vaihtaa kummituksen
+     * koordinaatteja suunnasta riippuen, lisaksi metodi kasvattaa laskurin
+     * arvoa yhdella.
+     * @param kentta metodi saa parametrina kentan, jossa liikkuminen tapahtuu
+     * 
+     */
     public void liiku(Kentta kentta) {
         if (suunta == SUUNTA.YLOS) {
             if (kentta.onkoKoordinaatissaSeina(this.x + 15, this.y - 1) || laskuri == 150) {
@@ -82,9 +95,10 @@ public class Kummitus extends Hahmo {
         }
         laskuri++;
     }
-/**
- * Arpoo satunnaisen suunnan ja asettaa sen kummituksen suunnaksi.
- */
+
+    /**
+     * Arpoo satunnaisen suunnan ja asettaa sen kummituksen suunnaksi.
+     */
     public void arvoSuunta() {
         Random arpoja = new Random();
         int s = arpoja.nextInt(4);
@@ -99,9 +113,10 @@ public class Kummitus extends Hahmo {
         }
 
     }
-/**
- * Arpoo suunnan niin, etta uusi suunta on eri kuin vanha suunta.
- */
+
+    /**
+     * Arpoo suunnan niin, etta uusi suunta on eri kuin vanha suunta.
+     */
     public void arvoUusiSuunta() {
         SUUNTA vanhaSuunta = this.suunta;
         while (this.suunta == vanhaSuunta) {

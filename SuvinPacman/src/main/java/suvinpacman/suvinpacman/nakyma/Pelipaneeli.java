@@ -36,6 +36,11 @@ public class Pelipaneeli extends JPanel implements ActionListener {
     private Nakyma nakyma;
     private NappaimistonKuuntelija nk;
     private PeliLooppi loop;
+    /**
+     * Pelipaneelin luova konstruktori.
+     * @param malli parametrina valitettava malli
+     * @param nakyma parametrina valitettava nakyma
+     */
 
     public Pelipaneeli(Malli malli, Nakyma nakyma) {
         this.malli = malli;
@@ -51,35 +56,33 @@ public class Pelipaneeli extends JPanel implements ActionListener {
 
     @Override
     protected void paintComponent(Graphics g) {
-        
+
         if (malli.getTila() == Malli.PelinTila.VOITTO) {
             g.setColor(Color.RED);
             Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 30);
             g.setFont(font);
             g.drawString("VOITIT PELIN", 200, 220);
-            
-           
+
         } else if (malli.getTila() == Malli.PelinTila.HAVIO) {
             g.setColor(Color.RED);
             Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 30);
             g.setFont(font);
             g.drawString("HÄVISIT PELIN", 200, 220);
-     
-        }
-        else{
-        super.paintComponent(g);    
-        
-        Pacman pacman = malli.getKentta().getPacman();
-        pacman.piirra(g);
-        for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
-            huhuu.piirra(g);
-        }
-        for (Seinapala seina : malli.getKentta().getSeinat()) {
-            seina.piirra(g);
-        }
-        for (Herkku herkku : malli.getKentta().getHerkut()) {
-            herkku.piirra(g);
-        }
+
+        } else {
+            super.paintComponent(g);
+
+            Pacman pacman = malli.getKentta().getPacman();
+            pacman.piirra(g);
+            for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
+                huhuu.piirra(g);
+            }
+            for (Seinapala seina : malli.getKentta().getSeinat()) {
+                seina.piirra(g);
+            }
+            for (Herkku herkku : malli.getKentta().getHerkut()) {
+                herkku.piirra(g);
+            }
         }
 
     }
@@ -93,9 +96,7 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         } else if (malli.getKentta().getPacman().tormaaKummitukseen(malli.getKentta().getKummitukset())) {
             malli.vaihdaPelinTila(Malli.PelinTila.HAVIO);
             nakyma.pelinTilaMuuttunut(Malli.PelinTila.HAVIO);
-            
-            
-            
+
         } else {
             malli.getKentta().getPacman().liiku(malli.getKentta());
             for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
@@ -115,7 +116,6 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         this.repaint();
 
     }
-    
 
     public PeliLooppi getLoop() {
         return loop;
@@ -124,7 +124,5 @@ public class Pelipaneeli extends JPanel implements ActionListener {
     public NappaimistonKuuntelija getNk() {
         return nk;
     }
-
-    
 
 }

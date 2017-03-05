@@ -20,9 +20,10 @@ public class Kentta {
     private ArrayList<Kummitus> kummitukset;
     private ArrayList<Herkku> herkut;
     private ArrayList<Seinapala> seinat;
-/**
- * Konstruktorissa luodaan kentalle kummitukset, herkut, seinat ja pacman.
- */
+
+    /**
+     * Konstruktorissa luodaan kentalle kummitukset, herkut, seinat ja pacman.
+     */
     public Kentta() {
         this.kummitukset = new ArrayList<>();
         for (int i = 0; i < 6; i++) {
@@ -40,9 +41,10 @@ public class Kentta {
         this.pacman = new Pacman(21, 21);
 
     }
-/**
- * Konstruktorissa kutsuttava metodi, joka tayttaa kentan herkuilla.
- */
+
+    /**
+     * Konstruktorissa kutsuttava metodi, joka tayttaa kentan herkuilla.
+     */
     public void lisaaHerkut() {
         int x = 30;
         int y = 35;
@@ -56,9 +58,12 @@ public class Kentta {
             x = 30;
         }
     }
-/**
- * Palauttaa true, jos Pacman on syonyt kentan kaikki herkut, ja false jos herkkuja on viela jaljella.
- */
+
+    /**
+     * Palauttaa true, jos Pacman on syonyt kentan kaikki herkut, ja false jos
+     * herkkuja on viela jaljella.
+     * @return totuusarvo, onko herkut syoty
+     */
     public boolean onkoKaikkiHerkutSyoty() {
         if (this.herkut.isEmpty()) {
             return true;
@@ -86,9 +91,14 @@ public class Kentta {
     public ArrayList<Seinapala> getSeinat() {
         return seinat;
     }
-/**
- * Tarkastaa, onko annetussa koordinaatissa seinaa, ja palauttaa true, jos on ja false, jos ei.
- */
+
+    /**
+     * Tarkastaa, onko annetussa koordinaatissa seinaa, ja palauttaa true, jos
+     * on ja false, jos ei.
+     * @param x x-koordinaatti, josta seinan olemassaoloa tarkistetaan
+     * @param y y-koordinaatti, josta seinan olemassaoloa tarkistetaan
+     * @return totuusarvo, onko koordinaatissa seina
+     */
     public boolean onkoKoordinaatissaSeina(int x, int y) {
         for (Seinapala seina : this.seinat) {
             if (seina.getX() <= x && seina.getX() + seina.getX2() >= x && seina.getY() <= y && seina.getY() + seina.getY2() >= y) {

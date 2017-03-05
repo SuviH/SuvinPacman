@@ -15,4 +15,8 @@ Nakyma-pakkauksessa on ohjelman käyttöliittymäpuoli. Nakymaan kuuluvat Aloitu
 
 ![Luokkakaavio](/dokumentaatio/PacmanLuokkakaavio.png)
 
+Seuraavassa sekvenssikaaviossa kuvaa olioiden välistä vuorovaikutusta tilanteessa, jossa "Aloita"-nappia painetaan, eli jossa ButtonListener-luokan actionPerformed-metodin suoritus lähtee liikkeelle. Napin painaminen aiheuttaa uuden pelin alustamisen ja käynnistymisen.
+
+![Sekvenssikaavio](/dokumentaatio/IMG_2191.JPG)
+
 

@@ -21,18 +21,25 @@ public class Seinapala {
     private int y;
     private int x2;
     private int y2;
-/**
- * Luo seinapalan koordinaattiin x,y, seinapalan leveys on x2 ja korkeus y2.
- */
+
+    /**
+     * Luo seinapalan koordinaattiin x,y, seinapalan leveys on x2 ja korkeus y2.
+     * @param x x-koordinaatti
+     * @param y y-koordinaatti
+     * @param x2 leveys
+     * @param y2 korkeus
+     */
     public Seinapala(int x, int y, int x2, int y2) {
         this.x = x;
         this.y = y;
         this.x2 = x2;
         this.y2 = y2;
     }
-/**
- * Piirtaa seinapalan.
- */
+
+    /**
+     * Piirtaa seinapalan.
+     * @param graphics Graphics-luokan ilmentyma, jonka avulla piirtaminen tehdaan
+     */
     public void piirra(Graphics graphics) {
         graphics.setColor(Color.RED);
         graphics.fillRect(x, y, x2, y2);

@@ -16,6 +16,11 @@ import javax.swing.Timer;
  * PeliLooppi pyorittaa pelia.
  */
 public class PeliLooppi extends Timer {
+    /**
+     * Konstruktori luo pelilooppi-olion.
+     * @param i kuinka usein pelia paivitetaan
+     * @param al komponentti, jonka paivitysmetodia kutsutaan
+     */
 
     public PeliLooppi(int i, ActionListener al) {
         super(i, al);

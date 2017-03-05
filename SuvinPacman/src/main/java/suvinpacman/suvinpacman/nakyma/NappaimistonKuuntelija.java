@@ -16,15 +16,20 @@ import suvinpacman.suvinpacman.malli.Pacman;
  * @author suvi
  */
 /**
- * Tapahtumakuuntelija, joka kuuntelee nuolinappaimia, ja vaihtaa pacmanin suuntaa.
+ * Tapahtumakuuntelija, joka kuuntelee nuolinappaimia, ja vaihtaa pacmanin
+ * suuntaa.
  */
 public class NappaimistonKuuntelija implements KeyListener {
 
     private Pacman pacman;
     private Component component;
+    /**
+     * NappaimistonKuuntelijan luova konstruktori, jossa kuuntelijaan liitetaan komponentti pelipaneeli.
+     * @param component komponentti, johon kuuntelija liitetaan
+     */
 
     public NappaimistonKuuntelija(Component component) {
-        
+
         this.component = component;
     }
 
@@ -35,7 +40,6 @@ public class NappaimistonKuuntelija implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
-        
 
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             pacman.setSuunta(Hahmo.SUUNTA.VASEN);
@@ -53,7 +57,8 @@ public class NappaimistonKuuntelija implements KeyListener {
     public void keyReleased(KeyEvent ke) {
 
     }
-    public void setPacman(Pacman pacman){
+
+    public void setPacman(Pacman pacman) {
         this.pacman = pacman;
     }
 

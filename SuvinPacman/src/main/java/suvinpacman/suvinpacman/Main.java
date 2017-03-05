@@ -18,14 +18,17 @@ import suvinpacman.suvinpacman.nakyma.Nakyma;
  * Peli kaynnistyy Main-luokasta.
  */
 public class Main {
-
+/**
+ * Main-metodi.
+ * @param args main-metodin parametri
+ */
     public static void main(String[] args) {
 
         SwingUtilities.invokeLater(new Runnable() {
 
             @Override
             public void run() {
-                
+
                 Malli malli = new Malli();
                 Nakyma nakyma = new Nakyma(malli);
             }
