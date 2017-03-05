@@ -18,15 +18,15 @@ public class Malli {
     private Kentta kentta;
     private PelinTila tila;
 
-    public Malli(Kentta kentta) {
-        this.kentta = kentta;
+    public Malli() {
+        this.alustaUusiPeli();
         this.tila = PelinTila.ALOITUS;
     }
 /**
  * Enum pelinTila kuvaa pelin kahta vaihtoehtoista tilaa, joiden perusteella esim nakymassa nakyva paneeli valitaan.
  */
     public enum PelinTila {
-        ALOITUS, PELI;
+        ALOITUS, PELI, VOITTO, HAVIO;
     }
 /**
  * Vaihtaa pelitilaksi parametrina olevan tilan.
@@ -41,6 +41,10 @@ public class Malli {
 
     public PelinTila getTila() {
         return tila;
+    }
+    public void alustaUusiPeli(){
+        this.kentta = new Kentta();
+        
     }
 
 }

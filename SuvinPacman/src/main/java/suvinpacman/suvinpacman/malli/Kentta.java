@@ -25,7 +25,7 @@ public class Kentta {
  */
     public Kentta() {
         this.kummitukset = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 6; i++) {
             this.kummitukset.add(new Kummitus(300, 250));
         }
         this.herkut = new ArrayList<>();
@@ -34,8 +34,8 @@ public class Kentta {
         seinat.add(new Seinapala(0, 0, 640, 20));
         seinat.add(new Seinapala(620, 0, 20, 480));
         seinat.add(new Seinapala(0, 460, 640, 20));
-        seinat.add(new Seinapala(100, 90, 440, 20));
-        seinat.add(new Seinapala(100, 370, 440, 20));
+        seinat.add(new Seinapala(100, 130, 440, 20));
+        seinat.add(new Seinapala(100, 330, 440, 20));
         this.lisaaHerkut();
         this.pacman = new Pacman(21, 21);
 

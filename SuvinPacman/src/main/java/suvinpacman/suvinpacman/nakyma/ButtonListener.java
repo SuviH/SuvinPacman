@@ -7,6 +7,8 @@ package suvinpacman.suvinpacman.nakyma;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import suvinpacman.suvinpacman.malli.Malli;
 
 /**
@@ -29,6 +31,8 @@ public class ButtonListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         malli.vaihdaPelinTila(Malli.PelinTila.PELI);
+        malli.alustaUusiPeli();
+        this.nakyma.getPelipaneeli().getNk().setPacman(malli.getKentta().getPacman());
         nakyma.pelinTilaMuuttunut(Malli.PelinTila.PELI);
     }
 

@@ -6,10 +6,15 @@
 package suvinpacman.suvinpacman.nakyma;
 
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JPanel;
 import suvinpacman.suvinpacman.malli.Herkku;
 import suvinpacman.suvinpacman.malli.Kentta;
@@ -38,7 +43,7 @@ public class Pelipaneeli extends JPanel implements ActionListener {
 
         this.setBackground(Color.BLACK);
 
-        this.nk = new NappaimistonKuuntelija(malli.getKentta().getPacman(), this);
+        this.nk = new NappaimistonKuuntelija(this);
         this.addKeyListener(nk);
         this.loop = new PeliLooppi(10, this);
 
@@ -46,8 +51,24 @@ public class Pelipaneeli extends JPanel implements ActionListener {
 
     @Override
     protected void paintComponent(Graphics g) {
-        super.paintComponent(g);
-
+        
+        if (malli.getTila() == Malli.PelinTila.VOITTO) {
+            g.setColor(Color.RED);
+            Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 30);
+            g.setFont(font);
+            g.drawString("VOITIT PELIN", 200, 220);
+            
+           
+        } else if (malli.getTila() == Malli.PelinTila.HAVIO) {
+            g.setColor(Color.RED);
+            Font font = new Font(Font.SANS_SERIF, Font.PLAIN, 30);
+            g.setFont(font);
+            g.drawString("HÄVISIT PELIN", 200, 220);
+     
+        }
+        else{
+        super.paintComponent(g);    
+        
         Pacman pacman = malli.getKentta().getPacman();
         pacman.piirra(g);
         for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
@@ -59,21 +80,51 @@ public class Pelipaneeli extends JPanel implements ActionListener {
         for (Herkku herkku : malli.getKentta().getHerkut()) {
             herkku.piirra(g);
         }
+        }
 
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        malli.getKentta().getPacman().liiku(malli.getKentta());
-        for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
-            huhuu.liiku(malli.getKentta());
+        if (malli.getKentta().getHerkut().isEmpty()) {
+            malli.vaihdaPelinTila(Malli.PelinTila.VOITTO);
+            nakyma.pelinTilaMuuttunut(Malli.PelinTila.VOITTO);
+
+        } else if (malli.getKentta().getPacman().tormaaKummitukseen(malli.getKentta().getKummitukset())) {
+            malli.vaihdaPelinTila(Malli.PelinTila.HAVIO);
+            nakyma.pelinTilaMuuttunut(Malli.PelinTila.HAVIO);
+            
+            
+            
+        } else {
+            malli.getKentta().getPacman().liiku(malli.getKentta());
+            for (Kummitus huhuu : malli.getKentta().getKummitukset()) {
+                huhuu.liiku(malli.getKentta());
+            }
+            ArrayList<Herkku> syodyt = new ArrayList<>();
+            for (Herkku herkku : malli.getKentta().getHerkut()) {
+                if (malli.getKentta().getPacman().tormaaHerkkuun(herkku)) {
+                    syodyt.add(herkku);
+                }
+            }
+            if (!syodyt.isEmpty()) {
+                malli.getKentta().getHerkut().removeAll(syodyt);
+            }
         }
+
         this.repaint();
 
     }
+    
 
     public PeliLooppi getLoop() {
         return loop;
     }
+
+    public NappaimistonKuuntelija getNk() {
+        return nk;
+    }
+
+    
 
 }

@@ -23,8 +23,8 @@ public class NappaimistonKuuntelija implements KeyListener {
     private Pacman pacman;
     private Component component;
 
-    public NappaimistonKuuntelija(Pacman pacman, Component component) {
-        this.pacman = pacman;
+    public NappaimistonKuuntelija(Component component) {
+        
         this.component = component;
     }
 
@@ -35,6 +35,7 @@ public class NappaimistonKuuntelija implements KeyListener {
 
     @Override
     public void keyPressed(KeyEvent e) {
+        
 
         if (e.getKeyCode() == KeyEvent.VK_LEFT) {
             pacman.setSuunta(Hahmo.SUUNTA.VASEN);
@@ -46,12 +47,14 @@ public class NappaimistonKuuntelija implements KeyListener {
             pacman.setSuunta(Hahmo.SUUNTA.ALAS);
         }
 
-        component.repaint();
     }
 
     @Override
     public void keyReleased(KeyEvent ke) {
 
+    }
+    public void setPacman(Pacman pacman){
+        this.pacman = pacman;
     }
 
 }

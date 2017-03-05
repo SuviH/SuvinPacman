@@ -25,8 +25,8 @@ public class Main {
 
             @Override
             public void run() {
-                Kentta kentta = new Kentta();
-                Malli malli = new Malli(kentta);
+                
+                Malli malli = new Malli();
                 Nakyma nakyma = new Nakyma(malli);
             }
 

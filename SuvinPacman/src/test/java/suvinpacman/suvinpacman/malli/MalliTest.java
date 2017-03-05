@@ -25,7 +25,7 @@ public class MalliTest {
 
     @Before
     public void setUp() {
-        this.malli = new Malli(new Kentta());
+        this.malli = new Malli();
 
     }
 

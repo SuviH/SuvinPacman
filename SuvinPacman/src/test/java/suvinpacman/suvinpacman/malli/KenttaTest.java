@@ -36,8 +36,8 @@ public class KenttaTest {
     }
 
     @Test
-    public void testiKummituksiaLisataanKymmenen() {
-        assertEquals(10, kentta.getKummitukset().size());
+    public void testiKummituksiaLisataanKuusi() {
+        assertEquals(6, kentta.getKummitukset().size());
     }
 
     @Test

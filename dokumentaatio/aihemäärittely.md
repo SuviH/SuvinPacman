@@ -3,10 +3,9 @@ Tarkoituksena toteuttaa Pacmanin kaltainen sokkelopeli, jossa Pacman-pallero sy�
 
 ### Toiminnot:
 -uuden pelin aloittaminen
--pelin lopettaminen
 
 ###Käyttöohje
-Kun peli käynnistetään, siirrytään aloitusruutuun, josta löytyy nappula "Aloita". Kun tätä klikataan, alkaa uusi peli. Pacman lähtee heti liikkeelle, ja jatkaa liikkumistaan koko pelin ajan. Pacmania ohjaillaan nuolinäppäimillä, joista Pacmanin suunta vaihtuu nuolinäppäimen osoittamaan suuntaan. Ohjaile Pacmania, väistele kummituksia ja yritä syödä kaikki herkut!
+Kun peli käynnistetään, siirrytään aloitusruutuun, josta löytyy nappula "Aloita". Kun tätä klikataan, alkaa uusi peli. Pacman lähtee heti liikkeelle ja jatkaa liikkumistaan koko pelin ajan. Pacmania ohjaillaan nuolinäppäimillä, joista Pacmanin suunta vaihtuu nuolinäppäimen osoittamaan suuntaan. Ohjaile Pacmania, yritä syödä kaikki herkut ja varo kummituksia, ne saattavat olla liikkeissään äkkinäisiä! Kun peli päättyy, siirrytään hetken kuluttua automaattisesti aloitusruutuun, josta voit taas aloittaa uuden pelin.
 
 ### Rakennekuvaus
 Ohjelma on jaettu pakkauksiin Malli ja Nakyma. Pakkauksesta Malli löytyvät ohjelman kaikki palaset, kuten Pacman, Kummitus ja Kentta. Luokka Kentta sisältää kentällä näkyvät palaset, eli pacmanin, kummitukset, seinat ja herkut. Luokka Hahmo on abstrakti luokka, jonka luokat Pacman ja Kummitus perivät. Pakkauksesta löytyy myös luokka Malli, joka sisältää ohjelman toimintalogiikan.
@@ -14,6 +13,6 @@ Nakyma-pakkauksessa on ohjelman käyttöliittymäpuoli. Nakymaan kuuluvat Aloitu
 
 
 
-![Luokkakaavio](/dokumentaatio/Luokkakaavio SuvinPacman(1).png)
+![Luokkakaavio](/dokumentaatio/PacmanLuokkakaavio.png)
 
 

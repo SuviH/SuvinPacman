@@ -103,7 +103,7 @@ public class KummitusTest {
     @Test
     public void kummitusVaihtaaSuuntaaKunLaskuriTaynna() {
         Hahmo.SUUNTA suunta = huhuu.getSuunta();
-        huhuu.setLaskuri(250);
+        huhuu.setLaskuri(150);
         huhuu.liiku(new Kentta());
         assertTrue(suunta != huhuu.getSuunta());
     }

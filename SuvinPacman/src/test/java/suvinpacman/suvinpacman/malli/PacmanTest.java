@@ -67,9 +67,9 @@ public class PacmanTest {
 
     @Test
     public void testiTormaaKummitukseenKunTrue() {
-        Hahmo huhuu = new Kummitus(21, 21);
-        Hahmo hohoo = new Kummitus(100, 100);
-        ArrayList<Hahmo> kummitukset = new ArrayList<>();
+        Kummitus huhuu = new Kummitus(21, 21);
+        Kummitus hohoo = new Kummitus(100, 100);
+        ArrayList<Kummitus> kummitukset = new ArrayList<>();
         kummitukset.add(huhuu);
         kummitukset.add(hohoo);
 
@@ -78,9 +78,9 @@ public class PacmanTest {
 
     @Test
     public void testiTormaaKummitukseenKunFalse() {
-        Hahmo huhuu = new Kummitus(100, 100);
-        Hahmo hohoo = new Kummitus(200, 200);
-        ArrayList<Hahmo> kummitukset = new ArrayList<>();
+        Kummitus huhuu = new Kummitus(100, 100);
+        Kummitus hohoo = new Kummitus(200, 200);
+        ArrayList<Kummitus> kummitukset = new ArrayList<>();
         kummitukset.add(huhuu);
         kummitukset.add(hohoo);
 
@@ -89,24 +89,14 @@ public class PacmanTest {
 
     @Test
     public void testiTormaaHerkkuunKunTrue() {
-        Herkku herkku1 = new Herkku(21, 21);
-        Herkku herkku2 = new Herkku(5, 5);
-        ArrayList<Herkku> herkut = new ArrayList<>();
-        herkut.add(herkku1);
-        herkut.add(herkku2);
-
-        assertTrue(pacman.tormaaHerkkuun(herkut));
+        Herkku herkku = new Herkku(41, 41);
+        assertTrue(pacman.tormaaHerkkuun(herkku));
     }
 
     @Test
     public void testiTormaaHerkkuunKunFalse() {
-        Herkku herkku1 = new Herkku(10, 10);
-        Herkku herkku2 = new Herkku(5, 5);
-        ArrayList<Herkku> herkut = new ArrayList<>();
-        herkut.add(herkku1);
-        herkut.add(herkku2);
-
-        assertFalse(pacman.tormaaHerkkuun(herkut));
+        Herkku herkku = new Herkku(60, 60);
+        assertFalse(pacman.tormaaHerkkuun(herkku));
     }
 
     @Test

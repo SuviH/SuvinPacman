@@ -48,7 +48,7 @@ public class Kummitus extends Hahmo {
  */
     public void liiku(Kentta kentta) {
         if (suunta == SUUNTA.YLOS) {
-            if (kentta.onkoKoordinaatissaSeina(this.x + 15, this.y - 1) || laskuri == 250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x + 15, this.y - 1) || laskuri == 150) {
                 this.arvoUusiSuunta();
                 laskuri = 0;
             } else {
@@ -56,7 +56,7 @@ public class Kummitus extends Hahmo {
             }
 
         } else if (suunta == SUUNTA.ALAS) {
-            if (kentta.onkoKoordinaatissaSeina(this.x + 15, this.y + 31) || laskuri == 250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x + 15, this.y + 31) || laskuri == 150) {
                 this.arvoUusiSuunta();
                 laskuri = 0;
             } else {
@@ -64,7 +64,7 @@ public class Kummitus extends Hahmo {
             }
 
         } else if (suunta == SUUNTA.VASEN) {
-            if (kentta.onkoKoordinaatissaSeina(this.x - 1, this.y + 15) || laskuri == 250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x - 1, this.y + 15) || laskuri == 150) {
                 this.arvoUusiSuunta();
                 laskuri = 0;
             } else {
@@ -72,7 +72,7 @@ public class Kummitus extends Hahmo {
             }
 
         } else if (suunta == SUUNTA.OIKEA) {
-            if (kentta.onkoKoordinaatissaSeina(this.x + 30 + 1, this.y + 15) || laskuri == 250) {
+            if (kentta.onkoKoordinaatissaSeina(this.x + 30 + 1, this.y + 15) || laskuri == 150) {
                 this.arvoUusiSuunta();
                 laskuri = 0;
             } else {

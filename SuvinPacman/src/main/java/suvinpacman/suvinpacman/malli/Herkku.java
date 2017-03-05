@@ -19,6 +19,7 @@ public class Herkku {
 
     private int x;
     private int y;
+    
 /**
  * Luo uuden herkun koordinaattiin x,y.
  */
